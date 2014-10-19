@@ -219,7 +219,7 @@ inline intptr_t NoBarrier_AtomicIncrement(volatile intptr_t* ptr,
 // Things that should probably be user-configurable
 
 // Number of times per second that we profile
-static const int kNumInterrupts = 100;
+static const int kNumInterrupts = 10; // atoi(ENV("TRACER_NUM_INTERRUPTS", "100"));
 
 // Maximum number of stack traces
 static const int kMaxStackTraces = 3000;
